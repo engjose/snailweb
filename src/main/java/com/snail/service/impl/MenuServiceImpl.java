@@ -1,5 +1,6 @@
 package com.snail.service.impl;
 
+import com.snail.common.enums.UseStatusEnum;
 import com.snail.dao.MenuMapper;
 import com.snail.pojo.domain.Menu;
 import com.snail.pojo.domain.MenuExample;
@@ -26,9 +27,8 @@ public class MenuServiceImpl implements MenuService {
     @Override
     public List<Menu> listMenus(String app, Integer level) {
         MenuExample example = new MenuExample();
-        MenuExample.Criteria criteria = example.createCriteria();
-        criteria.andAppEqualTo(app);
-        criteria.andLevelEqualTo(level);
+        example.createCriteria().andAppEqualTo(app).andLevelEqualTo(level).andStatusEqualTo(UseStatusEnum.USE.getCode());
+        example.setOrderByClause("priority");
         List<Menu> menus = menuMapper.selectByExample(example);
         return menus;
     }
