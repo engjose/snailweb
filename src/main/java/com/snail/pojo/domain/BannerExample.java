@@ -784,6 +784,66 @@ public class BannerExample {
             addCriterion("`status` not between", value1, value2, "status");
             return (Criteria) this;
         }
+
+        public Criteria andPriorityIsNull() {
+            addCriterion("`priority` is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriorityIsNotNull() {
+            addCriterion("`priority` is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriorityEqualTo(Integer value) {
+            addCriterion("`priority` =", value, "priority");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriorityNotEqualTo(Integer value) {
+            addCriterion("`priority` <>", value, "priority");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriorityGreaterThan(Integer value) {
+            addCriterion("`priority` >", value, "priority");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriorityGreaterThanOrEqualTo(Integer value) {
+            addCriterion("`priority` >=", value, "priority");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriorityLessThan(Integer value) {
+            addCriterion("`priority` <", value, "priority");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriorityLessThanOrEqualTo(Integer value) {
+            addCriterion("`priority` <=", value, "priority");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriorityIn(List<Integer> values) {
+            addCriterion("`priority` in", values, "priority");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriorityNotIn(List<Integer> values) {
+            addCriterion("`priority` not in", values, "priority");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriorityBetween(Integer value1, Integer value2) {
+            addCriterion("`priority` between", value1, value2, "priority");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriorityNotBetween(Integer value1, Integer value2) {
+            addCriterion("`priority` not between", value1, value2, "priority");
+            return (Criteria) this;
+        }
     }
 
     /**
