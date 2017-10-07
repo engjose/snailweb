@@ -252,6 +252,13 @@
       <artifactId>fastjson</artifactId>
       <version>1.2.7.sec01</version>
     </dependency>
+
+    <!--工具需要使用lombok插件-->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.16.10</version>
+    </dependency>
   </dependencies>
 
 
