@@ -1,4 +1,4 @@
-package com.snail.commen;
+package com.snail.common.constants;
 
 /**
  * Created by panyuanyuan on 2017/6/13.
