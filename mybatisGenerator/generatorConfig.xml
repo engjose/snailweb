@@ -59,7 +59,7 @@
         </javaClientGenerator>
 
         <table tableName="banner" delimitIdentifiers="true" delimitAllColumns="true"></table>
-        <table tableName="experience" delimitIdentifiers="true" delimitAllColumns="true"></table>
+        <!--<table tableName="experience" delimitIdentifiers="true" delimitAllColumns="true"></table>-->
         <table tableName="menu" delimitIdentifiers="true" delimitAllColumns="true"></table>
 
     </context>

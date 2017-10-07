@@ -49,11 +49,13 @@ public interface BannerMapper {
         "insert into `banner` (`id`, `img_url`, ",
         "`title`, `content`, ",
         "`jump_url`, `app`, `upate_at`, ",
-        "`create_at`, `status`)",
+        "`create_at`, `status`, ",
+        "`priority`)",
         "values (#{id,jdbcType=INTEGER}, #{imgUrl,jdbcType=VARCHAR}, ",
         "#{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, ",
         "#{jumpUrl,jdbcType=VARCHAR}, #{app,jdbcType=VARCHAR}, #{upateAt,jdbcType=TIMESTAMP}, ",
-        "#{createAt,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER})"
+        "#{createAt,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, ",
+        "#{priority,jdbcType=INTEGER})"
     })
     int insert(Banner record);
 
@@ -82,7 +84,7 @@ public interface BannerMapper {
     @Select({
         "select",
         "`id`, `img_url`, `title`, `content`, `jump_url`, `app`, `upate_at`, `create_at`, ",
-        "`status`",
+        "`status`, `priority`",
         "from `banner`",
         "where `id` = #{id,jdbcType=INTEGER}"
     })
@@ -128,7 +130,8 @@ public interface BannerMapper {
           "`app` = #{app,jdbcType=VARCHAR},",
           "`upate_at` = #{upateAt,jdbcType=TIMESTAMP},",
           "`create_at` = #{createAt,jdbcType=TIMESTAMP},",
-          "`status` = #{status,jdbcType=INTEGER}",
+          "`status` = #{status,jdbcType=INTEGER},",
+          "`priority` = #{priority,jdbcType=INTEGER}",
         "where `id` = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(Banner record);

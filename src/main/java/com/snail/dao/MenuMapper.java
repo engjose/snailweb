@@ -50,12 +50,14 @@ public interface MenuMapper {
         "`name`, `desc`, `parent_id`, ",
         "`app`, `url`, `update_at`, ",
         "`create_at`, `create_by`, ",
-        "`update_by`, `status`)",
+        "`update_by`, `status`, ",
+        "`priority`)",
         "values (#{id,jdbcType=INTEGER}, #{level,jdbcType=INTEGER}, ",
         "#{name,jdbcType=VARCHAR}, #{desc,jdbcType=VARCHAR}, #{parentId,jdbcType=INTEGER}, ",
         "#{app,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{updateAt,jdbcType=TIMESTAMP}, ",
         "#{createAt,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR}, ",
-        "#{updateBy,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})"
+        "#{updateBy,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, ",
+        "#{priority,jdbcType=INTEGER})"
     })
     int insert(Menu record);
 
@@ -84,7 +86,7 @@ public interface MenuMapper {
     @Select({
         "select",
         "`id`, `level`, `name`, `desc`, `parent_id`, `app`, `url`, `update_at`, `create_at`, ",
-        "`create_by`, `update_by`, `status`",
+        "`create_by`, `update_by`, `status`, `priority`",
         "from `menu`",
         "where `id` = #{id,jdbcType=INTEGER}"
     })
@@ -133,7 +135,8 @@ public interface MenuMapper {
           "`create_at` = #{createAt,jdbcType=TIMESTAMP},",
           "`create_by` = #{createBy,jdbcType=VARCHAR},",
           "`update_by` = #{updateBy,jdbcType=VARCHAR},",
-          "`status` = #{status,jdbcType=INTEGER}",
+          "`status` = #{status,jdbcType=INTEGER},",
+          "`priority` = #{priority,jdbcType=INTEGER}",
         "where `id` = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(Menu record);
