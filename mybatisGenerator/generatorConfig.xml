@@ -15,8 +15,8 @@
             <property name="suppressDate" value="true"/>
         </commentGenerator>
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://cjjcommon.crqqtvsjmosc.rds.cn-north-1.amazonaws.com.cn/payment"
-                        userId="tomcat" password="1qaz@WSX">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://shopping.fireworm.online:3306/snail_common"
+                        userId="panyuanyuan" password="ZTEywz0225">
         </jdbcConnection>
 
         <javaTypeResolver>
@@ -24,7 +24,7 @@
         </javaTypeResolver>
 
         
-        <javaModelGenerator targetPackage="cn.caijiajia.payment.domain" targetProject="../src/main/java">
+        <javaModelGenerator targetPackage="com.snail.pojo.domain" targetProject="../src/main/java">
 
             <property name="constructorBased" value="true"/>
 
@@ -39,13 +39,13 @@
         </javaModelGenerator>
 
        
-        <sqlMapGenerator targetPackage="cn.caijiajia.payment.mapper" targetProject="../src/main/resources">
+        <sqlMapGenerator targetPackage="com.snail.dao" targetProject="../src/main/resources">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
 
      
-        <javaClientGenerator targetPackage="cn.caijiajia.payment.mapper" targetProject="../src/main/java"
+        <javaClientGenerator targetPackage="com.snail.dao" targetProject="../src/main/java"
                              type="MIXEDMAPPER">
             <property name="enableSubPackages" value=""/>
            
@@ -58,27 +58,9 @@
 
         </javaClientGenerator>
 
-       <!--  <table tableName="usrpay_reconciliation_info" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-        <!-- <table tableName="reconciliation_log" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-        <!--<table tableName="usrpay_clearing_info" delimitIdentifiers="true" delimitAllColumns="true"></table>-->
-        <!--<table tableName="merchpay_reconciliation_info" delimitIdentifiers="true" delimitAllColumns="true"></table>-->
-        <!-- <table tableName="bank_info" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-       <!--  <table tableName="super_net_bank_info" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-<!-- 		<table tableName="bf_banding_card_log" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-<!-- 		<table tableName="channel_change_log" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-<!-- 		<table tableName="bank_abbreviation" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-		<!-- <table tableName="validation_log" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-		<!-- <table tableName="async_repay_log" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-<!-- 		<table tableName="async_repay_log_history" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-<!-- 		<table tableName="trans_log_extend" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-		<!-- <table tableName="pipeline_process_info" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-        <!-- table tableName="trans_share_log" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-        <!--<tableable tableName="validation_history_log" delimitIdentifiers="true" delimitAllColumns="true"></table> -->
-        <!--<table tableName="card_tmp" delimitIdentifiers="true" delimitAllColumns="true"></table>-->
-        <!--<table tableName="sign_log" delimitIdentifiers="true" delimitAllColumns="true"></table>-->
-        <!--<table tableName="trans_log" delimitIdentifiers="true" delimitAllColumns="true"></table>-->
-        <table tableName="trans_history_log" delimitIdentifiers="true" delimitAllColumns="true"></table>
-        <!--<table tableName="trans_failed_message_info" delimitIdentifiers="true" delimitAllColumns="true"></table>-->
-        <!--<table tableName="trans_failed_message_maintenance_log" delimitIdentifiers="true" delimitAllColumns="true"></table>-->
+        <table tableName="banner" delimitIdentifiers="true" delimitAllColumns="true"></table>
+        <table tableName="experience" delimitIdentifiers="true" delimitAllColumns="true"></table>
+        <table tableName="menu" delimitIdentifiers="true" delimitAllColumns="true"></table>
+
     </context>
 </generatorConfiguration>
