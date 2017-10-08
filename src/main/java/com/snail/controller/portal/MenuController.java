@@ -3,7 +3,7 @@ package com.snail.controller.portal;
 import com.snail.common.constants.ResultMap;
 import com.snail.pojo.domain.Menu;
 import com.snail.service.base.MenuService;
-import com.sun.istack.internal.NotNull;
+import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,7 +29,7 @@ public class MenuController {
      * @return 包含菜单列表的响应对象
      */
     @RequestMapping(value = "/list", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
-    public ResultMap listMenus(@NotNull String app, @RequestParam(defaultValue = "1") Integer level) {
+    public ResultMap listMenus(@NonNull String app, @RequestParam(defaultValue = "1") Integer level) {
         List<Menu> menus = menuService.listMenus(app, level);
         return  ResultMap.getResultMap(200, "success", menus);
     }
