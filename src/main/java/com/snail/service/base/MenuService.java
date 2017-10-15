@@ -17,5 +17,5 @@ public interface MenuService {
      * @param level 菜单的等级
      * @return 指定等级的菜单列表
      */
-    List<Menu> listMenus(String app, Integer level);
+    List<Menu> menus(String app, Integer level);
 }
