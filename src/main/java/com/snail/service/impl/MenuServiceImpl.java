@@ -22,10 +22,10 @@ public class MenuServiceImpl implements MenuService {
     private MenuMapper menuMapper;
 
     /**
-     * @see com.snail.service.base.MenuService#listMenus(String, Integer)
+     * @see com.snail.service.base.MenuService#menus(String, Integer)
      */
     @Override
-    public List<Menu> listMenus(String app, Integer level) {
+    public List<Menu> menus(String app, Integer level) {
         MenuExample example = new MenuExample();
         example.createCriteria().andAppEqualTo(app).andLevelEqualTo(level).andStatusEqualTo(UseStatusEnum.USE.getCode());
         example.setOrderByClause("priority");
